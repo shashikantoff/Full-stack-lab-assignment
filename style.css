@@ -1,57 +1,109 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
 }
 
 .navbar{
-    background-color: #ff6b6b;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#ff6b6b;
+    padding:15px 40px;
 }
 
 .logo{
+    background:#0a1a2f;
     color:white;
-    background:#222;
-    padding:8px 15px;
+    padding:10px 25px;
+    font-size:20px;
+    font-weight:bold;
 }
 
-.menu a{
+.nav-links a{
     color:white;
+    margin-left:25px;
+    font-size:18px;
     text-decoration:none;
-    margin-left:15px;
-    font-size: 15px;
 }
 
 .hero{
-    background-image: url("https://images.unsplash.com/photo-1497493292307-31c376b6e479");
-    height: 280px;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
+    height:300px;
+    background:url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa") center/cover no-repeat;
+    text-align:center;
     color:white;
-    padding-top: 80px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-.about{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    gap: 20px;
-    background:#f2f2f2;
+.hero h1{
+    font-size:45px;
+    margin-bottom:10px;
 }
 
-.about-text p{
-    margin-bottom: 10px;
+.about-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    padding:40px;
+    background:#233d61;
+    gap:30px;
+    color:white;
 }
 
-.about-img img{
+.about-section h2{
+    margin-bottom:15px;
+}
+
+.about-section p{
+    margin-bottom:12px;
+    line-height:1.6;
+}
+
+.about-image img{
     width:100%;
+    border-radius:5px;
 }
 
-@media(max-width: 768px){
-    .about{
-        grid-template-columns: 1fr;
+.offer-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.offer-box{
+    background:#f4c842;
+    padding:40px;
+    text-align:center;
+}
+
+.offer-box button{
+    margin-top:15px;
+    background:#1d2d44;
+    color:white;
+    padding:10px 25px;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.why-box{
+    background:#86d3b7;
+    padding:40px;
+}
+
+.why-box h2{
+    margin-bottom:10px;
+}
+
+.why-box p{
+    margin-bottom:10px;
+    font-size:16px;
+}
+
+@media(max-width:900px){
+    .about-section,
+    .offer-section{
+        grid-template-columns:1fr;
     }
 }
